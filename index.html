@@ -38,27 +38,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var ex_count = 0; //variable that counts number of heat exhaustion symptoms
-        var stroke_count = 0; //varaible that counts number of heat stroke symptoms
+	var hives_count = 0; //variable that counts number of hives symptoms
+        var rash_count = 0; //varaible that counts number of rash stroke symptoms
 
-        function exAdd(){
-            ex_count = ex_count + 1;
-		alert(ex_count);
+        function hivesAdd(){
+            hives_count = hives_count + 1;
+		alert(hives_count);
 
-        } //this function adds the number of heat exhaustion symptoms everytime the correct button is pushed
+        } //this function adds the number of hives symptoms everytime the correct button is pushed
 
-        function strokeAdd(){
-            stroke_count = stroke_count + 1;
-		alert(stroke_count);
-        } //this function adds the number of heat stroke symptoms everytime the correct button is pushed 
+        function rashAdd(){
+            rash_count = rash_count + 1;
+		alert(rash_count);
+        } //this function adds the number of rash symptoms everytime the correct button is pushed 
 	
 	function getResults(){
-		var exPercent = (ex_count / 4) * 100;
-		var strokePercent = (stroke_count / 4) * 100;
+		var hivesPercent = (hives_count / 4) * 100;
+		var rashPercent = (rash_count / 4) * 100;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is heat exhaustion =" + exPercent + "<br> Probability it is heat stroke =" + strokePercent; 
+		resultText.innerHTML = "Probability it is hives=" + hivesPercent + "<br> Probability it is a rash =" + rashPercent; 
 		
-	} //this function calculates the percent chance of heat stroke or heat exhaustion by turning the ex_count and stroke_count into a percent then displays it on the page as probabilities
+	} //this function calculates the percent chance of hives or rash by turning the ex_count and stroke_count into a percent then displays it on the page as probabilities
 
 </script>	
 
