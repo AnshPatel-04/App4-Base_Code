@@ -39,7 +39,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 
 	var hives_count = 0; //variable that counts number of hives symptoms
-        var rash_count = 0; //varaible that counts number of rash stroke symptoms
+        var rash_count = 0; //varaible that counts number of rash symptoms
 
         function hivesAdd(){
             hives_count = hives_count + 1;
@@ -88,8 +88,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<div id="header" class"w#-container w3-flat-carrot">
+		<h1> Hives or Rash? </h1>
+	</div>
+	
+	<div id= "content" class"w3-container">
+		<p> There is a common misconception that hives and rashes are interchangeable terms, but this is not entirely true. Hives are actually a specific form of rash, but not all rashes are a result of hives. To properly address skin concerns, its crucial to distinguish between rashes caused by hives and those caused by other factors.</p>
+		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- When this button is pushed app will move to first question -->
+		<p> The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+	
+	<div class="page" id="one"> <!-- Creates Page 1 -->
+		<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+        		<p> Are your eyes watery or itchy?</p>   <!-- Question displayed to the patient on page 1-->
+			<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> <!-- "Yes" button for Question 1, adds 1 to the allergy count then moves to page 2 -->
+			<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- "No" button for Question 1, adds 1 to the cold count then moves to page 2 -->
+		
+    		</div>
+	</div>
+		
 	
 </body>
 </html>
