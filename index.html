@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Create web app to diagnose between hip arthritis or hip bursitis. 
  
 Known Issues:
 blah, blah, blah, blah
@@ -38,27 +38,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var hives_count = 0; //variable that counts number of hives symptoms
-        var rash_count = 0; //varaible that counts number of rash symptoms
+	var arthritis_count = 0; //variable that counts number of arthritis symptoms
+        var bursitis_count = 0; //varaible that counts number of bursitis symptoms
 
-        function hivesAdd(){
-            hives_count = hives_count + 1;
-		alert(hives_count);
+        function arthritisAdd(){
+            arthritis_count = arthritis_count + 1;
+		alert(arthritis_count);
 
-        } //this function adds the number of hives symptoms everytime the correct button is pushed
+        } //this function adds the number of arthritis symptoms everytime the correct button is pushed
 
-        function rashAdd(){
-            rash_count = rash_count + 1;
-		alert(rash_count);
-        } //this function adds the number of rash symptoms everytime the correct button is pushed 
+        function bursitisAdd(){
+            bursitis_count = bursitis_count + 1;
+		alert(bursitis_count);
+        } //this function adds the number of bursitis symptoms everytime the correct button is pushed 
 	
 	function getResults(){
-		var hivesPercent = (hives_count / 4) * 100;
-		var rashPercent = (rash_count / 4) * 100;
+		var arthritisPercent = (arthritis_count / 4) * 100;
+		var bursitisPercent = (bursitis_count / 4) * 100;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is hives=" + hivesPercent + "<br> Probability it is a rash =" + rashPercent; 
+		resultText.innerHTML = "Probability it is arthritis =" + arthritisPercent + "<br> Probability it is a bursitis =" + bursitisPercent; 
 		
-	} //this function calculates the percent chance of hives or rash by turning the ex_count and stroke_count into a percent then displays it on the page as probabilities
+	} //this function calculates the percent chance of arthritis or bursitis by turning the arthritis_count and bursitis_count into a percent then displays it on the page as probabilities
 
 </script>	
 
@@ -89,29 +89,84 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 	
 	<div id="header" class"w#-container w3-flat-carrot">
-		<h1> Hives or Rash? </h1>
+		<h1> Hip Bursitis or Hip Osteoarthritis? </h1>
 	</div>
 	
 	<div id= "content" class"w3-container">
-		<p> There is a common misconception that hives and rashes are interchangeable terms, but this is not entirely true. Hives are actually a specific form of rash, but not all rashes are a result of hives. To properly address skin concerns, its crucial to distinguish between rashes caused by hives and those caused by other factors.</p>
+		<p> BLAH BLAH BLAH </p>
 		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- When this button is pushed app will move to first question -->
-		<p> The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+		<p> The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
-	
+<!-- This division encloses the code for page 2.-->		
 	<div class="page" id="one"> <!-- Creates Page 1 -->
 		<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 		</div>
 	
     		<div id="content" class="w3-container">
-        		<p> Are your eyes watery or itchy?</p>   <!-- Question displayed to the patient on page 1-->
-			<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> <!-- "Yes" button for Question 1, adds 1 to the allergy count then moves to page 2 -->
-			<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- "No" button for Question 1, adds 1 to the cold count then moves to page 2 -->
+        		<p>Is the pain a result of recent physical trauma, such as a fall, or persistent for more than a few weeks?</p>   <!-- Question displayed to the patient on page 1-->
+			<a href="#two" onclick="bursitisAdd();" class="w3-btn w3-black">Recent</a> <!-- "Yes" button for Question 1, adds 1 to the bursitis count then moves to page 2 -->
+			<a href="#two" onclick="arthritisAdd();" class="w3-btn w3-black">Persistent</a> <!-- "No" button for Question 1, adds 1 to the arthritis count then moves to page 2 -->
 		
     		</div>
 	</div>
+<!-- This division encloses the code for page 2.-->
+	<div class="page" id="two"> <!-- Creates Page 2 -->
+		<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+        		<p> Do you feel locking, sticking, grating or grinding when walking or moving?</p>   <!-- Question displayed to the patient on page 2-->
+			<a href="#three" onclick="arthritisAdd();" class="w3-btn w3-black">Yes</a> <!-- "Yes" button for Question 2, adds 1 to the arthritis count then moves to page 3 -->
+			<a href="#three" onclick="bursitisAdd();" class="w3-btn w3-black">No</a> <!-- "No" button for Question 2, adds 1 to the bursitis count then moves to page 3 -->
 		
+    		</div>
+	</div>
+<!-- This division encloses the code for page 3.-->
+	<div class="page" id="three"> <!-- Creates Page 3 -->
+		<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+        		<p> Are you feeling sharp pain buttock, groin, thigh and hip?</p>   <!-- Question displayed to the patient on page 3-->
+			<a href="#four" onclick="arthritisAdd();" class="w3-btn w3-black">Yes</a> <!-- "Yes" button for Question 3, adds 1 to the arthritis count then moves to page 4 -->
+			<a href="#four" onclick="bursitisAdd();" class="w3-btn w3-black">No</a> <!-- "No" button for Question 3, adds 1 to the bursitis count then moves to page 4 -->
+		
+    		</div>
+	</div>
+<!-- This division encloses the code for page 4. -->
+	<div class="page" id="four"> <!-- Creates Page 4 -->
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Question 4</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+        		<p> Is the joint pain worse in the morning or at night?</p>   <!-- Question displayed to the patient on page 3-->
+			<a href="#five" onclick="arthritisAdd();" class="w3-btn w3-black">Morning</a> <!-- "Yes" button for Question 4, adds 1 to arthritis count then moves to page 5 -->
+			<a href="#five" onclick="bursitisAdd();" class="w3-btn w3-black">Night</a> <!-- "No" button for Question 4, adds 1 to bursitis count then moves to page 5 -->
+		
+    		</div>
+	</div>
+<!-- This division encloses the code for page 5. -->	
+	<div class="page" id="five"> <!-- Creates Page 5 -->
+		<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results Page</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+			<a class="w3-btn w3-black" onclick="getResults();">Click to view results</a> <!-- Button to run getResults function and calculate % chance of arthritis or bursitis -->
+			<p id= "results"></p> 
+
+		</div>
+	</div>
+<!-- Footer for every page -->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+	
 	
 </body>
 </html>
